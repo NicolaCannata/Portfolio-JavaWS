@@ -3,8 +3,7 @@ package com.nicolacannata.Appws.entity;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name="users")
+@Entity(name="userss")
 public class UserEntity implements Serializable{
 
     private static final long serialVersionUID = 8076405899207283205L;
@@ -28,7 +27,7 @@ public class UserEntity implements Serializable{
     @Column(nullable = false)
     private String encryptedPassword;
 
-    private String emailVerificationToker;
+    private String emailVerificationToken;
 
     @Column(nullable = false)
     private boolean emailVerificationStatus = false;
@@ -82,11 +81,11 @@ public class UserEntity implements Serializable{
     }
 
     public String getEmailVerificationToker() {
-        return emailVerificationToker;
+        return emailVerificationToken;
     }
 
     public void setEmailVerificationToker(String emailVerificationToker) {
-        this.emailVerificationToker = emailVerificationToker;
+        this.emailVerificationToken = emailVerificationToker;
     }
 
     public boolean isEmailVerificationStatus() {
